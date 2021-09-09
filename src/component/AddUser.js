@@ -15,7 +15,7 @@ export default function AddUser() {
         e.preventDefault();
       
         if (e!=null) {
-            await axios.post("http://localhost:3000/users", users);
+         let mydata=   await axios.post("http://localhost:3000/users", users);
             toast.success('Success! Data Inserted', {
                 position: "top-right",
                 autoClose: 2000,

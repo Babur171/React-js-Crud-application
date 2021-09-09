@@ -27,6 +27,13 @@
       "email": "mazzmk6628@gmail.com",
       "password": "111",
       "id": 5
+    },
+    {
+      "fname": "ahmad",
+      "lname": "ali",
+      "email": "dss@sda.com",
+      "password": "123",
+      "id": 6
     }
   ]
 }

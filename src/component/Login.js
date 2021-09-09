@@ -9,13 +9,21 @@ export default function Login() {
     const[email,setEmail]=useState('');
     const[pass,setPass]=useState('');
 
+    useEffect(()=>{
+        if(localStorage.getItem('user-info')){
+            history.push('/showuser');
+        }
+    })
+
 const loaddata = async e => { 
     e.preventDefault();
     const getData = await axios.get("http://localhost:3000/users");
     let arr=getData.data;
     let emailFound = arr.find(x => x.email ==email )
     if( emailFound && emailFound.password ==pass){
-        history.push("/showuser");
+        localStorage.setItem('user-info',JSON.stringify(emailFound.email))
+            history.push("/showuser");
+            
     }else{
         toast.error('Email And Password Wrong', {
             position: "top-right",

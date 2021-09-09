@@ -1,7 +1,14 @@
-import { Nav } from "react-bootstrap";
+import { Nav, NavDropdown } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar'
 import {Link} from 'react-router-dom';
+import Button from "@restart/ui/esm/Button";
+import { useHistory } from "react-router";
 function Navbr(){
+  let history=useHistory();
+  function logout(){
+    localStorage.clear();
+    history.push('/login');
+  }
     return (
       <>
  <Navbar bg="primary" expand="lg" >
@@ -13,11 +20,22 @@ function Navbr(){
       style={{ maxHeight: '100px', }}
       navbarScroll
     >
-      <Link className="nav-link text-white" to="/showUser">Show</Link>
+      {
+        localStorage.getItem('user-info')?
+        <>
+        <Link className="nav-link text-white" to="/showUser">Show</Link>
       <Link className="nav-link text-white" to="/addUser">Add User</Link>
       <Link className="nav-link text-white" to="/editUser"></Link>
-    </Nav>
+      <a className="nav-link text-white" href="/login" onClick={logout}>Logout</a>
+      </>:
+      <>
+      <Link className="nav-link text-white float-right" to="/login">Login</Link>
+      
+      </>
+      }
+      </Nav>
   </Navbar.Collapse>
+  
 </Navbar>
 </>
         
