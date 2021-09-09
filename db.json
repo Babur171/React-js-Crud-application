@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "fname": "dvfdfdvf",
+      "lname": "gfdg",
+      "email": "c421customer@gmail.com",
+      "password": "111",
+      "id": 2
+    },
+    {
+      "fname": "ali",
+      "lname": "ahmad",
+      "email": "abc@gmail.com",
+      "password": "134",
+      "id": 3
+    },
+    {
+      "fname": "gsadfahs",
+      "lname": "hgash",
+      "email": "abcc@gsad.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "fname": "Moazzam",
+      "lname": "Ali",
+      "email": "mazzmk6628@gmail.com",
+      "password": "111",
+      "id": 5
+    }
+  ]
+}
